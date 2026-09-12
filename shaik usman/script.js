@@ -1,3 +1,0 @@
-const menu=document.querySelector('.menu');const nav=document.querySelector('nav');if(menu)menu.addEventListener('click',()=>nav.classList.toggle('open'));document.querySelectorAll('nav a').forEach(a=>a.addEventListener('click',()=>nav.classList.remove('open')));
-const observer=new IntersectionObserver((entries)=>entries.forEach(e=>{if(e.isIntersecting){e.target.classList.add('visible');observer.unobserve(e.target)}}),{threshold:.12});document.querySelectorAll('.section,.cards article,.timeline article,.projects article,.education,.contact').forEach((el,i)=>{el.classList.add('reveal');el.style.transitionDelay=Math.min(i*35,250)+'ms';observer.observe(el)});
-document.getElementById('year').textContent=new Date().getFullYear();
